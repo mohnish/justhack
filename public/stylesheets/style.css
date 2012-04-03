@@ -5,3 +5,15 @@ body {
 a {
   color: #00b7ff;
 }
+#month {
+  font-size: 20px;
+}
+#day {
+  font-size: 30px;
+}
+#date {
+  font-size: 45px;
+}
+#time {
+  font-size: 60px;
+}

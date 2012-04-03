@@ -4,10 +4,10 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
-
-var app = module.exports = express.createServer()
-  , io = require('socket.io').listen(app);
+  , routes = require('./routes')
+  , app = module.exports = express.createServer()
+  , io = require('socket.io').listen(app)
+  , moment = require('moment');
 
 // Configuration
 
@@ -34,10 +34,10 @@ app.configure('production', function(){
 io.sockets.on('connection', function (socket) {
   socket.emit('welcome', { message: 'Welcome Hacker. Start hacking...now!' });
   socket.on('time', function(data) {
-    socket.emit('current-time', {time: 'Current time is:'});
+    socket.emit('current-time', {time: moment().format('dddd, MMMM, Do, YYYY, h:mm:ss a')});
   });
   socket.on('disconnect', function (data) {
-    console.log('Hacker disconnected!');
+    console.log('Hacker has disconnected!');
   });
 });
 
