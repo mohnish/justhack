@@ -6,7 +6,8 @@
 var express = require('express')
   , routes = require('./routes');
 
-var app = module.exports = express.createServer();
+var app = module.exports = express.createServer()
+  , io = require('socket.io').listen(app);
 
 // Configuration
 
@@ -30,10 +31,17 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
+io.sockets.on('connection', function (socket) {
+  socket.emit('welcome', { greeting: 'hello amigo!' });
+  socket.on('thanks', function (data) {
+    console.log(data);
+  });
+});
+
 // Routes
 
 app.get('/', routes.index);
 
 app.listen(3000, function(){
-  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+  console.log("JustHack fired up on port %d in %s mode", app.address().port, app.settings.env);
 });
