@@ -3,6 +3,7 @@
 Check out the app at: [http://justhack.in](http://justhack.in)
 
 ####TODO:
+- Installation script
 - Add ability to create a timer
 - Add ability to associate the timer with a task
 - Create user accounts
