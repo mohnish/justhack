@@ -7,9 +7,7 @@ socket.on('welcome', function (data) {
   
   alert(data.message);
   // Beg for the current time every second
-  setInterval(function() {
-    socket.emit('time');
-  }, 1000);
+  socket.emit('time');  
   // When begging is successful, grab the time and display it to the hacker
   socket.on('current-time', function(data) {
     var fullTimeDisplay = data.time.split(', ');

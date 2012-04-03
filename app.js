@@ -34,7 +34,9 @@ app.configure('production', function(){
 io.sockets.on('connection', function (socket) {
   socket.emit('welcome', { message: 'Welcome Hacker. Start hacking...now!' });
   socket.on('time', function(data) {
-    socket.emit('current-time', {time: moment().format('dddd, MMMM, Do, YYYY, h:mm:ss a')});
+    setInterval(function() {
+      socket.emit('current-time', {time: moment().format('dddd, MMMM, Do, YYYY, h:mm:ss a')});
+    }, 1000);    
   });
   socket.on('disconnect', function (data) {
     console.log('Hacker has disconnected!');
