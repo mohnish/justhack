@@ -47,6 +47,6 @@ io.sockets.on('connection', function (socket) {
 
 app.get('/', routes.index);
 
-app.listen(3000, function(){
+app.listen(3001, function(){
   console.log("JustHack fired up on port %d in %s mode", app.address().port, app.settings.env);
 });
