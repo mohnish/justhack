@@ -32,9 +32,12 @@ app.configure('production', function(){
 });
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('welcome', { greeting: 'hello amigo!' });
-  socket.on('thanks', function (data) {
-    console.log(data);
+  socket.emit('welcome', { message: 'Welcome Hacker. Start hacking...now!' });
+  socket.on('time', function(data) {
+    socket.emit('current-time', {time: 'Current time is:'});
+  });
+  socket.on('disconnect', function (data) {
+    console.log('Hacker disconnected!');
   });
 });
 
