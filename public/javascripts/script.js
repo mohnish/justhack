@@ -5,7 +5,6 @@ socket.on('welcome', function (data) {
     , displayDate = document.getElementById('date')
     , displayTime = document.getElementById('time');
   
-  alert(data.message);
   // Beg for the current time every second
   socket.emit('time');  
   // When begging is successful, grab the time and display it to the hacker
