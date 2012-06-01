@@ -23,7 +23,7 @@ Check out the app at: [http://justhack.in](http://justhack.in) (Not live yet)
 
 (The MIT License)
 
-Copyright (c) 2009 Mohnish Thallavajhula &lt;i@mohni.sh&gt;
+Copyright (c) 2012 Mohnish Thallavajhula &lt;i@mohni.sh&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
