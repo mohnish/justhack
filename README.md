@@ -6,6 +6,7 @@ Check out the app at: [http://justhack.in](http://justhack.in) (Not live yet)
 ![http://i.imgur.com/WUPzL.png](http://i.imgur.com/WUPzL.png)
 
 ####TODO:
+- Usage manual
 - Installation script
 - Add ability to create a timer
 - Add ability to associate the timer with a task
