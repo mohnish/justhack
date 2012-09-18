@@ -1,7 +1,7 @@
 ### JustHack
 
 #### Set a time and start hacking.
-Check out the app at: [http://justhack.in](http://justhack.in) (Not live yet)
+Check out the app at: [http://justhack.in](http://justhack.in)
 
 ![http://i.imgur.com/WUPzL.png](http://i.imgur.com/WUPzL.png)
 
